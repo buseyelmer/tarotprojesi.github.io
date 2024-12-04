@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Tarot Fısıltısı | Ana Sayfa</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Hero Bölümü -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Tarot Fısıltısı'na Hoş Geldiniz</h1>
+                <p>Tarot kartlarının gizemli dünyasında keşfe çıkmaya hazır olun.</p>
+                <a href="iletisim.html" class="cta-button">Bize Katılın</a>
+            </div>
+        </section>
+        <br>
+
+        <br><br>
+
+        <!-- Hizmetler Bölümü -->
+        <section class="services">
+            <h2>Hizmetlerimiz</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Kart Okuma</h3>
+                    <p>Profesyonel tarot okuyucularımızla geçmişinizi, bugününüzü ve geleceğinizi keşfedin.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Spiritüel Danışmanlık</h3>
+                    <p>Ruhsal yolculuğunuzda rehberlik sağlıyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Atölye Çalışmaları</h3>
+                    <p>Tarot öğrenmek isteyenler için özel eğitim ve atölyeler.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <br><br>
+
+
+        <!-- Hakkımızda Bölümü -->
+        <section class="about-preview">
+            <h2>Hakkımızda</h2>
+            <p>Tarot Fısıltısı, kadim bilgilerin modern dünyaya rehberlik etmesi için kuruldu. Daha fazla bilgi için...
+            </p>
+            <a href="hakkimizda.html" class="cta-button">Daha Fazlasını Keşfet</a>
+        </section>
+
+        <br>
+
+        <!-- Galeri Bölümü -->
+        <section class="gallery">
+            <h2>Galeri</h2>
+            <div class="gallery-container">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/card-game-2205554_640.jpg" alt="Tarot Kartları">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/tarot-cards-7395644_640.jpg" alt="Tarot Masası">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/fortune-telling-4896472_640.jpg"
+                    alt="Spiritüel Sanat">
+            </div>
+        </section>
+
+        <br>
+
+        <!-- İletişim Bölümü -->
+        <section class="contact-preview">
+            <h2>İletişim</h2>
+            <p>Size nasıl yardımcı olabiliriz? İletişime geçmek için tıklayın.</p>
+            <a href="iletisim.html" class="cta-button">Bize Ulaşın</a>
+
+            <br><br>
+        </section>
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://x.com/literallybuse"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/buseyelmeer/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Tarot Fısıltısı. Tüm hakları saklıdır ©</p>
+    </footer>
+
+
+
+
+
+    <script>
+        // Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Karanlık Mod Aç/Kapa Fonksiyonu
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
+
+</html>
