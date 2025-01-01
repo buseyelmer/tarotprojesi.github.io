@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Kayıt Formu</title>
+    <script src="https://unpkg.com/mongodb-stitch-browser-sdk/dist/bundle.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Tarot Fısıltısı | Hakkımızda</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <h1>Kullanıcı Kayıt Formu</h1>
+    <form id="kullanici-form">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required><br>
+
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required><br>
+
+        <label for="eposta">E-posta:</label>
+        <input type="email" id="eposta" name="eposta" required><br>
+
+        <label for="mesaj">Mesaj:</label>
+        <textarea id="mesaj" name="mesaj" required></textarea><br>
+
+        <button type="submit">Kaydet</button>
+    </form>
+
+
+
+
+
+    <form id="giris-form">
+        <input type="email" id="eposta" placeholder="E-posta" required>
+        <input type="password" id="sifre" placeholder="Şifre" required>
+        <button type="submit">Giriş Yap</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // MongoDB bağlantısı
+        const client = new stitch.StitchAppClient("<app-id>");
+        const db = client.getServiceClient(stitch.RemoteMongoClient.factory, "mongodb-atlas")
+            .db("kullaniciDB");
+
+        // Form işlemi
+        document.getElementById("kullanici-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const ad = document.getElementById("ad").value;
+            const soyad = document.getElementById("soyad").value;
+            const eposta = document.getElementById("eposta").value;
+            const mesaj = document.getElementById("mesaj").value;
+
+            try {
+                await db.collection("kullanicilar").insertOne({ ad, soyad, eposta, mesaj });
+                alert("Kullanıcı başarıyla kaydedildi!");
+            } catch (error) {
+                console.error("Hata:", error);
+                alert("Kullanıcı kaydedilemedi!");
+            }
+        });
+    </script>
+
+    <body>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                line-height: 1.6;
+                background-color: #EFE1D1;
+                color: #333;
+                transition: background-color 0.3s, color 0.3s;
+                padding-bottom: 50px;
+                /* Footer ile çakışmayı önlemek için padding */
+                min-height: 100vh;
+                /* Sayfanın yüksekliği minimum olarak ekranın tamamını kapsar */
+            }
+
+
+
+            /* Dark Mode */
+            body.dark-mode {
+                background-color: #331D2C;
+                color: #fff;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                background-color: #A5B68D;
+                padding: 1rem;
+                color: #fff;
+            }
+
+            .navbar a {
+                color: #fff;
+                text-decoration: none;
+            }
+        </style>
+    </body>
+</body>
+
+</html>

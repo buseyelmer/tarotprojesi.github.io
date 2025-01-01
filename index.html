@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Fısıltısı</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="login-container">
+        <h2>Giriş Yap</h2>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="E-posta" required>
+            <input type="password" id="password" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+
+
+
+
+
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Tarot Fısıltısı</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Slider -->
+    <div class="slider-container">
+        <div class="slider" id="slider1">
+            <div class="slide">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/craft-2728227_1920.jpg" alt="Tarot Card 1">
+                <h2>Bugün İçin Tarot Okumanızı Yaptırın!</h2>
+                <p>Günlük kartınız sizi bekliyor! Kişisel tarot okumanızla yeni bir bakış açısı kazanın.</p>
+                <a href="hemenoku.html">
+                    <button class="cta-button">Şimdi Okuma Yaptır</button>
+                </a>
+            </div>
+
+            <div class="slide">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/sliderrrr.jpg" alt="Tarot Card 2">
+                <h2>Bugün Size Gösterilecek 3 Tarot Kartı</h2>
+                <p>Her gün farklı kartlar, yeni bir yönünüzü keşfetmenize yardımcı olacak.</p>
+                <a href="Simdiokuma.html">
+                    <button class="cta-button">Bugünkü Kartınızı Görün</button>
+                </a>
+            </div>
+            <div class="slide">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/tarot-991041_1280.jpg" alt="Tarot Card 3">
+                <h2>Mistik Yolculuğunuza Başlayın</h2>
+                <p>Tarot ile kendi yolculuğunuza çıkın. Uzman tarot okuyucularımızla rehberlik alın.</p>
+                <a href="iletisim.html">
+                    <button class="cta-button">Bize Ulaşın</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    <section id="about-text">
+        <h2>Tarot Nedir?</h2>
+        <p>Tarot, geçmişi yüzlerce yıl öncesine dayanan mistik bir kart sistemidir. Bugün tarot, bireylerin kendilerini
+            keşfetmelerine ve yön bulmalarına yardımcı olmak için kullanılmaktadır.</p>
+        <p>Kartların her biri, hayatınızın farklı bir yönüne ışık tutan sembollerle doludur.</p>
+        <p>78 kartlık Tarot destelerinin, her biri kendi imgelerine ve sembollerine karşılık farklı hikayeler taşır.
+            Tarot, sorduğunuz manevi sorulara mutlaka cevap bulabileceğiniz bir kaçıştır. Aradığınız ilhamı, o çok
+            ihtiyacınız olan motivasyonu size verebilir. Tüm enerjinizle yoğunlaşıp seçtiğiniz bir kart, size pek çok
+            kişi ve olayın kazandıramadığı hayat dersini sunabilir.</p>
+    </section>
+
+    <br>
+
+    <!-- Sıkça Sorulan Sorular -->
+    <section id="faq">
+        <h2>Sıkça Sorulan Sorular</h2>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(0)">Tarot kartlarını nasıl seçmeliyim?</h3>
+            <p class="faq-answer">Tarot kartlarını seçerken içgüdülerinize güvenin. Hangi kartın sizi çektiğini
+                düşünüyorsanız, o kart sizin için bir mesaj taşır.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(1)">Tarot geleceğimi tahmin eder mi?</h3>
+            <p class="faq-answer">Tarot, geleceği kesin bir şekilde tahmin etmek yerine size yol gösterici bilgiler
+                sunar.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(2)">Kartlar kötü haber verir mi?</h3>
+            <p class="faq-answer">Tarot kartları kötü haber vermez, yalnızca uyarılar ve rehberlik sunar.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(3)">Tarot kartlarının anlamları her zaman aynı mıdır?</h3>
+            <p class="faq-answer"> Evet, tarot kartlarının anlamları genellikle sabittir, ancak bazı yorumcular kartları
+                kendi sezgilerine ve yaşam deneyimlerine göre farklı şekilde yorumlayabilir.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(4)">Kartlar bir kişiye sürekli olarak bakıldığında değişir mi?</h3>
+            <p class="faq-answer"> Evet, tarot kartları bir kişinin yaşamındaki değişikliklerle paralel olarak farklı
+                yönlere işaret edebilir. Kartlar, kişiyle birlikte gelişebilir ve farklı anlamlar kazanabilir.</p>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section id="testimonials">
+        <h2>Danışan Yorumları</h2>
+        <div class="testimonial">
+            <p>"Tarot okuması bana çok şey kattı! Kendimi ve geleceğimi daha iyi anlamama yardımcı oldu."</p>
+            <h4>- Eren Araz</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Harika bir deneyimdi. Sorularıma tam olarak yanıt aldım."</p>
+            <h4>- Gamze Soysal</h4>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section id="contact">
+        <h2>Bize Ulaşın</h2>
+        <form>
+            <input type="text" placeholder="Adınız" required>
+            <input type="email" placeholder="E-posta" required>
+            <textarea placeholder="Mesajınız"></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://x.com/literallybuse"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/buseyelmeer/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Tarot Fısıltısı. Tüm hakları saklıdır ©</p>
+    </footer>
+
+
+
+
+    <!-- JS -->
+    <script>
+        // Slider Otomatik Geçiş
+        const slider = document.querySelector("#slider1");
+        const slides = slider.querySelectorAll(".slide");
+        let currentSlide = 0;
+
+        function autoSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        setInterval(autoSlide, 3000); // 3 saniyede bir değişim
+
+        // SSS Açılır/Kapanır Mekanizması
+        function toggleAnswer(index) {
+            const answers = document.querySelectorAll(".faq-answer");
+            const selectedAnswer = answers[index];
+            selectedAnswer.style.display = selectedAnswer.style.display === "none" ? "block" : "none";
+        }
+
+        // Başlangıçta cevapları gizlemek
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+    </script>
+
+
+
+    <script>
+        // Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Karanlık Mod Aç/Kapa Fonksiyonu
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

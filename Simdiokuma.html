@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şimdi Oku</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Tarot Fısıltısı | Şimdi Oku</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/olum.jpg" alt="Ölüm Kartı">
+                <div class="content">
+                    <h3>Geçmiş Kartınız: ÖLÜM</h3>
+                    <p>Bu kart, genellikle eski bir dönemin veya bir sürecin sona erdiğini, bir şeyin bitişini ifade
+                        eder. ÖLÜM kartı, aynı zamanda eski düşünceleri, alışkanlıkları ya da ilişkileri bırakmayı da
+                        simgeler. Bu kart, bir nevi yeniden doğuş ya da yenilenme için yer açma anlamına gelir. Ölümler,
+                        her zaman fiziksel anlamda değil, daha çok psikolojik, duygusal veya ruhsal anlamda bir sonu
+                        işaret edebilir. Bu kart, geçmişteki zor bir dönemden, travmalardan ya da engellerden
+                        geçildiğini gösterebilir.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/tilsim_yedilisi.jpg" alt="Şimdi Kartı">
+                <div class="content">
+                    <h3>Şimdi Kartınız: TILSIM YEDİLİSİ</h3>
+                    <p>TILSIM YEDİLİSİ kartı, bir tür ruhsal ya da manevi gizemle ilgili bir dönemi simgeler. Bu kart,
+                        ilham, rehberlik, sihir veya büyü anlamları taşıyabilir. Ancak, yedili bir yapı olarak, bu kart
+                        aynı zamanda bir bütün olma, uyum sağlama ya da bazı soruların cevaplarını arama anlamına da
+                        gelir. Bu kart, derin içsel arayış ve kişinin doğaüstü veya bilinçaltı taraflarına yönelme
+                        isteğini ifade edebilir. Ayrıca, karmaşık bir durumda ya da çıkmazda olan bir kişinin, doğru
+                        yolu bulmak için yeni, sıradışı bir bakış açısı aradığını da gösterebilir.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/Tarot-Cards-Rider-Waite-Full-Deck/seytan.jpg" alt="Gelecek Kartı">
+                <div class="content">
+                    <h3>Gelecek Kartınız: ŞEYTAN</h3>
+                    <p>Gelecek için ŞEYTAN kartı, bir uyanış, tuzaklardan kaçınma, özgürlük kazanma veya gölge
+                        yönlerinizle yüzleşme zamanının geldiğini gösteriyor olabilir. Bu kart, alışkanlıklarınız,
+                        bağımlılıklarınız, korkularınız veya sizi sınırlayan düşünce kalıplarınızla ilgili derin bir
+                        farkındalık geliştirme gerekliliğini işaret eder. Kendisini ve kararlarını sorgulamadan
+                        ilerlemek, manipülasyonlara açık olmak veya irade zayıflığı yaşamak, bu kartın bir uyarısı
+                        olabilir.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <script>
+        // Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Karanlık Mod Aç/Kapa Fonksiyonu
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+
+
+    <!-- Dark Mode Script -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            const themeIcon = document.querySelector(".theme-toggle i");
+            if (body.classList.contains("dark-mode")) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+        }
+    </script>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://x.com/literallybuse"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/buseyelmeer/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Tarot Fısıltısı. Tüm hakları saklıdır ©</p>
+    </footer>
+
+
+
+    <script>
+        // Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Karanlık Mod Aç/Kapa Fonksiyonu
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #EFE1D1;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            padding-bottom: 50px;
+            min-height: 100vh;
+        }
+
+        body.dark-mode {
+            background-color: #331D2C;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #A5B68D;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            display: flex;
+            background-color: #F2E6D8;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card img {
+            width: auto;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #4B2C36;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* Social Media Links */
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .card {
+                width: 90%;
+                max-width: none;
+                height: auto;
+            }
+
+            .card img {
+                height: 120px;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 30px;
+            }
+
+            .theme-toggle {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card h3 {
+                font-size: 18px;
+            }
+
+            .card p {
+                font-size: 14px;
+            }
+
+            .navbar {
+                padding: 0.5rem;
+            }
+
+            .social-media a {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

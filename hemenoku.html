@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemen Oku</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Tarot Fısıltısı | Hemen Oku</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+
+    <main class="tarot-reading">
+        <section class="reading-content">
+            <h1>Bugünkü Tarot Kartınız</h1>
+            <img src="degnek_uclusu.jpg" alt="Tarot Kartı" class="tarot-image">
+            <h2>DEĞNEK ÜÇLÜSÜ</h2>
+            <p>
+                Bugün seçtiğiniz kart <strong>"Değnek Üçlüsü"</strong>, yeni fırsatların ve genişleyen ufukların bir
+                işareti.
+                Bu kart, girişimlerinizi ileriye taşımak için cesaret ve kararlılık sergilemeniz gerektiğini vurgular.
+            </p>
+            <h3>Kartın Anlamı:</h3>
+            <ul>
+                <li><strong>Genel:</strong> Yeni başlangıçlara açık olun ve cesurca adım atın. Bu dönemde fırsatlar sizi
+                    bekliyor, onları değerlendirmek için hazır olun.</li>
+                <li><strong>Aşk:</strong> İlişkinizde yeni bir döneme geçiş için kendinizi hazırlayın. İleriye yönelik
+                    güzel gelişmeler için cesurca hareket edebilirsiniz.</li>
+                <li><strong>Kariyer:</strong> Yeni projelere ve iş fırsatlarına odaklanın. Kariyerinizdeki
+                    potansiyelinizi en iyi şekilde değerlendirmek için cesaret ve kararlılık gerekebilir.
+
+                </li>
+                <li><strong>Sağlık:</strong> Zihinsel ve fiziksel sağlığınıza özen gösterin. Yenilikleri kucaklayın,
+                    sağlığınızda olumlu değişikliklere yer açın.</li>
+            </ul>
+            <br>
+            <p>Unutmayın, tarot kartları size rehberlik eder ancak asıl gücünüz kendi seçimlerinizde yatar.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://x.com/literallybuse"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/buseyelmeer/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Tarot Fısıltısı. Tüm hakları saklıdır ©</p>
+    </footer>
+
+
+
+
+    <!-- Dark Mode Script -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            const themeIcon = document.querySelector(".theme-toggle i");
+            if (body.classList.contains("dark-mode")) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+        }
+    </script>
+
+    <!-- Stil -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #EFE1D1;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #331D2C;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #A5B68D;
+            padding: 1rem;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar .theme-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .navbar .theme-toggle i {
+            font-size: 1.8rem;
+        }
+
+        .navbar.dark-mode {
+            background-color: #3F2E3E;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .tarot-reading {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .tarot-reading h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tarot-image {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .tarot-image:hover {
+            transform: scale(1.05);
+        }
+
+        .reading-content ul {
+            list-style-type: square;
+            text-align: left;
+            display: inline-block;
+            margin: 1rem auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer.dark-mode {
+            background-color: #444;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        footer p {
+            margin: 0;
+            padding: 10px;
+            font-size: 1rem;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Karanlık Mod Aç/Kapa Fonksiyonu
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
+
+</html>

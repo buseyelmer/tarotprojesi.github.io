@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.1"
+  },
+  "name": "tarot-proje",
+  "version": "1.0.0",
+  "description": "Bu proje, **Tarot Fısıltısı** adlı bir tarot okuma hizmetini tanıtan ve kullanıcılara çeşitli tarot hizmetleri sunan bir web sitesini içerir. Web sitesi, kullanıcılara tarot okumaları hakkında bilgi sunmak, onları doğru yönlendirmek ve içerik üzerinden ulaşılabilir bir deneyim sağlamak amacıyla tasarlanmıştır.",
+  "main": "deneme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

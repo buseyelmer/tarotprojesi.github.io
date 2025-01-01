@@ -1,0 +1,1021 @@
+/*  anasayfa*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+#card-result {
+    margin-top: 20px;
+}
+
+#card-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#card-description {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+/* Temel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a
+
+/*tw-insta-yt*/
+    {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar tasarımı RENKKKKKKKKKKKKKKKKKKKKKKKKKK */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A5B68D;
+    padding: 15px 30px;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Flexbox ile menü öğelerini sağa hizalama */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    /* Bu satır menü öğelerini sağa yaslar */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #C1CFA1;
+}
+
+/* Dropdown menü stili */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #D8DBBD;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobil uyumlu menü */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+/* Mobil ekranlarda menü gizleme */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #C1CFA1;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: relative;
+        top: 0;
+    }
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* dark mode ayarıııı */
+
+body.dark-mode {
+    background-color: #331D2C;
+    color: rgb(122, 20, 20);
+}
+
+body.dark-mode .navbar {
+    background-color: #3F2E3E;
+}
+
+body.dark-mode .nav-links a {
+    color: #A78295;
+}
+
+
+
+body {
+    transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+
+/* Genel Slider Stilleri */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.slide img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #987070;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #C39898;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #E7CCCC;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #DEAA79;
+}
+
+/* Düğmeler */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+    }
+
+    .prev,
+    .next {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    .cta-button {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+
+    .prev,
+    .next {
+        padding: 6px;
+        font-size: 1rem;
+    }
+}
+
+
+
+.faq-item h3 {
+    cursor: pointer;
+    background: #C1CFA1;
+    padding: 10px;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+
+.faq-item h3:hover {
+    background: #A5B68D;
+}
+
+.faq-item p {
+    display: none;
+    /* Varsayılan olarak gizli */
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+.faq-item.active p {
+    display: block;
+    /* Aktif olduğunda görünür */
+}
+
+
+#testimonials {
+    background: #E7CCCC;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px 0;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+
+
+#blog {
+    margin: 20px;
+}
+
+#blog ul {
+    list-style: none;
+    padding: 0;
+}
+
+#blog li {
+    margin: 10px 0;
+}
+
+#blog a {
+    color: #A78295;
+    text-decoration: underline;
+}
+
+/* iletişim index*/
+#contact {
+    background: #C1CFA1;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#contact input,
+#contact textarea,
+#contact button {
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+#contact button {
+    background: #A78295;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#contact button:hover {
+    background: #A5B68D;
+    border-radius: 30px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*  hakkımızda kısmı  */
+.about-intro,
+.our-story,
+.our-approach,
+.why-choose-us,
+.testimonials {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #EDE8DC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+h1,
+h2 {
+    color: #987070;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    position: absolute;
+    left: 0;
+    color: #987070;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #B1C29E;
+    padding: 15px;
+    border-left: 4px solid #A78295;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+    text-align: right;
+}
+
+
+/*  anasayfa  */
+.hero {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #A78295;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #A78295;
+}
+
+
+/* hizmetler bölümü  */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.services .service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.services .service-item {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+/* galeri */
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero .hero-content {
+    background-color: #EDE8DC;
+    width: 1920px;
+    height: 50px;
+    padding-inline: 50px;
+    display: block;
+    justify-content: center;
+    padding-bottom: 30%;
+    padding-top: 15%;
+}
+
+/*  tarot nedir? */
+#about {
+    background-color: #EDE8DC;
+    height: 240px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* iletişim*/
+#contact {
+    padding: 60px 20px;
+    background-color: #E7CCCC;
+    color: #333;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.info-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.info-box i {
+    font-size: 2rem;
+    color: #A5B68D;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    color: #C1CFA1;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    font-size: 2.5rem;
+    color: #A5B68D;
+    margin-bottom: 20px;
+}
+
+.form-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #3F2E3E;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #EDE8DC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3F2E3E;
+}
+
+
+/* Dark Mode */
+body.dark-mode #contact {
+    background-color: #EFE1D1;
+    color: #ddd;
+}
+
+body.dark-mode .contact-info .info-box {
+    background-color: #A78295;
+    color: #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact-info .info-box i {
+    color: #331D2C;
+}
+
+body.dark-mode .form-section {
+    background-color: #333;
+}
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group textarea {
+    background-color: #555;
+    color: white;
+    border-color: #777;
+}
+
+body.dark-mode .submit-btn {
+    background-color: #331D2C;
+}
+
+body.dark-mode .submit-btn:hover {
+    background-color: #A78295;
+}
+
+
+/* hizmetler*/
+.tarot-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.choices button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #f4f4f4;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.choices button:hover {
+    background-color: #ddd;
+}
+
+.card-area {
+    margin-top: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card.open {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* BLOG */
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+.blog-header {
+    /* background-color: #444; */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.blog-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.blog-header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.blog-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.blog-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Blog Kartları */
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.blog-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-info {
+    padding: 1rem;
+}
+
+.blog-info h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.blog-info h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.blog-info p {
+    margin: 0.5rem 0;
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Footer */
+.blog-footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #444;
+    color: #fff;
+}
+
+
+/*navbar genel*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #A5B68D;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.navbar button {
+    background-color: #4e4e4e;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tarot-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+
+
+/* Hero Section ANASAYFA */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    /* Arka plan görseli */
+    height: 250px;
+    /* Tam ekran boyu */
+    padding: 250px;
+}
+
+.hero-content {
+    color: #fff;
+    max-width: 600px;
+    /* İçeriğin genişliği */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    /* Arka plan opaklığı */
+    border-radius: 8px;
+    /* Köşe yuvarlama */
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    /* Başlık boyutu */
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #fff;
+    background: #C1CFA1;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #A5B68D;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        /* Daha küçük ekranlar için yükseklik dinamik */
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        /* Başlık boyutunu küçült */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        /* Paragraf boyutunu küçült */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        /* Buton yazı boyutunu küçült */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        /* Daha küçük başlık */
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        /* Daha küçük buton */
+    }
+}

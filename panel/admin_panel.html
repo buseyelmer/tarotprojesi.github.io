@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <h1>Welcome to Admin Panel</h1>
+    <p>This is the admin panel. Only authorized users can see this page.</p>
+
+    <script>
+        // Token'ı kontrol et ve doğrula
+        const token = localStorage.getItem('token');
+        if (!token) {
+            alert('Please log in');
+            window.location.href = '/login.html';  // Giriş sayfasına yönlendir
+        }
+
+        // Admin kontrolü ve yönlendirme
+        fetch('http://localhost:3000/api/admin', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message !== 'Admin paneline hoş geldiniz!') {
+                    alert('Access denied');
+                    window.location.href = '/login.html';  // Giriş sayfasına yönlendir
+                }
+            })
+            .catch(() => {
+                alert('Invalid token or not authorized');
+                window.location.href = '/login.html';  // Giriş sayfasına yönlendir
+            });
+    </script>
+</body>
+
+</html>

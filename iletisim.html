@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneme</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Tarot Fısıltısı | İletişim</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adres</h3>
+                    <p>Tarot Fısıltısı Mahallesi, Mistik Caddesi No: 34, İstanbul</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Telefon</h3>
+                    <p>+90 546 432 9697</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <h3>E-posta</h3>
+                    <p>info@tarotfisiltisi.com</p>
+                </div>
+
+            </div>
+
+            <div class="form-section">
+                <h2>Bize Ulaşın</h2>
+                <p>Tarot hakkında sorularınız varsa, bir okuma talep ediyorsanız veya bize katılmak istiyorsanız lütfen
+                    aşağıdaki formu doldurun.</p>
+                <form id="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder="Adınız" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="E-posta" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" name="message" placeholder="Mesajınız" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Mesajı Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <br><br><br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://x.com/literallybuse"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/buseyelmeer/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Tarot Fısıltısı. Tüm hakları saklıdır ©</p>
+    </footer>
+
+
+    <!-- Dark Mode Script -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            const themeIcon = document.querySelector(".theme-toggle i");
+            if (body.classList.contains("dark-mode")) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+        }
+    </script>
+
+
+    <script>
+        function selectCard(title, description) {
+            // Kullanıcıya tıklanan kartın başlık ve açıklamasını gösterecek
+            alert("Kart Seçildi: " + title + "\nAçıklama: " + description);
+        }
+    </script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #EFE1D1;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            padding-bottom: 50px;
+            /* Footer ile çakışmayı önlemek için padding */
+            min-height: 100vh;
+            /* Sayfanın yüksekliği minimum olarak ekranın tamamını kapsar */
+        }
+
+
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #331D2C;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #A5B68D;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .tarot-reading {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            /* kart arası mesafe */
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            display: flex;
+            background-color: #F2E6D8;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 900px;
+            max-width: 700px;
+            height: 450px;
+            cursor: pointer;
+            /* Tıklanabilirlik belirtmek için ekledik */
+        }
+
+        .card img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .card .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 900px;
+            width: 100%;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #4B2C36;
+            /* Başlık rengi */
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            /* Sayfanın altına yapışacak şekilde*/
+            width: 100%;
+            margin-top: auto;
+            /* Sayfa içeriği sonrasında footer'ın en alta itilmesi */
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
+
+
+
+
+
+
+    <script>
+        // Menü Aç/Kapa Fonksiyonu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Karanlık Mod Aç/Kapa Fonksiyonu
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
+
+</html>
